@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" media="screen" href="/styles/main.css">
+    <link rel="stylesheet" media="screen" href="/snake/styles/main.css">
 </head>
 
 <body>
     <header id="navigator">
         <h1>
-            <a href="/portfolio.html">teleprint.me</a>
+            <a href="/portfolio.html">menu</a>
         </h1>
-        
+
         <nav>
             <button id="app-main-menu">Menu</button>
             <button id="app-high-scores">High Scores</button>
@@ -24,10 +24,18 @@
 
     <main>
         <div class="debug">
-            <p id="container" class="tooltip" data-hover="Canvas Dimensions and Origin">undefined</p>
-            <p id="grid" class="tooltip" data-hover="Grid Cell Count and Dimensions">undefined</p>
-            <p id="cell" class="tooltip" data-hover="Cell Coordinate Position and Velocity">undefined</p>
-            <p id="key" class="tooltip" data-hover="Keyboard Input Code">undefined</p>
+            <p id="container" class="tooltip" data-hover="Canvas Dimensions and Origin">
+                undefined
+            </p>
+            <p id="grid" class="tooltip" data-hover="Grid Cell Count and Dimensions">
+                undefined
+            </p>
+            <p id="cell" class="tooltip" data-hover="Cell Coordinate Position and Velocity">
+                undefined
+            </p>
+            <p id="key" class="tooltip" data-hover="Keyboard Input Code">
+                undefined
+            </p>
         </div>
         <div class="debug">
             <p id="food" class="tooltip" data-hover="Current Food Cell Coordinate">undefined</p>
@@ -37,12 +45,12 @@
         </div>
         <canvas id="snake">Oops! Your browser does not support HTML5 Canvas.</canvas>
     </main>
-    
-    <script src="/scripts/sound.js"></script>
-    <script src="/scripts/grid.js"></script>
-    <script src="/scripts/cell.js"></script>
-    <script src="/scripts/input.js"></script>
-    <script src="/scripts/main.js"></script>
+
+    <script src="/snake/scripts/sound.js"></script>
+    <script src="/snake/scripts/grid.js"></script>
+    <script src="/snake/scripts/cell.js"></script>
+    <script src="/snake/scripts/input.js"></script>
+    <script src="/snake/scripts/main.js"></script>
 </body>
 
 </html>
