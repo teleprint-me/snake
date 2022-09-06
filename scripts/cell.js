@@ -56,10 +56,13 @@ class Snake extends Cell {
         // speed is determined by canvas refresh rate
         // refresh rate is in milliseconds due to the setTimeout delay parameter
         switch (this.length) {
-            case 5:
+            case 10:
+                this.speed = 95;
+                return true;
+            case 25:
                 this.speed = 90;
                 return true;
-            case 10:
+            case 50:
                 this.speed = 80;
                 return true;
             case 75:
