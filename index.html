@@ -10,7 +10,19 @@
 </head>
 
 <body>
-    <header>
+    <header id="navigator">
+        <h1>
+            <a href="/portfolio.html">teleprint.me</a>
+        </h1>
+        
+        <nav>
+            <button id="app-main-menu">Menu</button>
+            <button id="app-high-scores">High Scores</button>
+            <button id="app-main-reset">Reset</button>
+        </nav>
+    </header>
+
+    <main>
         <div class="debug">
             <p id="container" class="tooltip" data-hover="Canvas Dimensions and Origin">undefined</p>
             <p id="grid" class="tooltip" data-hover="Grid Cell Count and Dimensions">undefined</p>
@@ -23,9 +35,6 @@
             <p id="speed" class="tooltip" data-hover="Current speed in milliseconds">undefined</p>
             <p id="tail" class="tooltip" data-hover="Snake Tail Cell Coordinate Data">undefined</p>
         </div>
-    </header>
-
-    <main>
         <canvas id="snake">Oops! Your browser does not support HTML5 Canvas.</canvas>
     </main>
     
