@@ -1,0 +1,66 @@
+:root {
+    --color-primary: lightgray;
+    --background-primary: rgb(25, 25, 25);
+    --background-secondary: rgb(50, 50, 50);
+    --background-tertiary: rgb(75, 75, 75);
+    --border-primary: rgb(175, 175, 175);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--background-primary);
+}
+
+canvas {
+    display: block;
+    margin: 10px auto;
+    outline: var(--border-primary) solid 1px;
+    border-radius: 10px;
+}
+
+.debug {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 5px;
+    padding: 5px;
+    color: var(--color-primary);
+    border-radius: 5%;
+    background: var(--background-secondary);
+}
+
+.tooltip {
+    position: relative;
+    border-bottom: 1px dotted var(--color-primary);
+}
+
+.tooltip:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 100px;
+    /* width: max-content; */
+    outline: var(--border-primary) solid 1px;
+    background-color: var(--background-tertiary);
+    color: var(--color-primary);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    transition: opacity 250ms ease-in-out;
+
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 150%;
+}
+
+.tooltip:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
