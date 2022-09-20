@@ -4,6 +4,7 @@ let snake = new Snake(grid, grid.columns / 2, grid.rows / 2);
 let food = new Food(grid, grid.columns / 2, grid.rows / 2 - 5)
 let input = new KeyboardInput(snake);
 let sound = new Sound();
+let score = document.querySelector("#app-score");
 
 document.addEventListener("keydown", keyDown);
 
@@ -37,6 +38,8 @@ function main(x, y) {
 
     food.draw();
     food.debug();
+
+    score.innerText = `Score: ${snake.length}`
 
     setTimeout(main, snake.speed, x, y);
 }

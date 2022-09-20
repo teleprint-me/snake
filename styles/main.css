@@ -41,12 +41,26 @@ body {
 
 canvas {
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
+    width: 50%;
     outline: var(--border-primary);
     border-radius: 10px;
 }
 
+.display-none {
+    display: none;
+}
+
 .debug {
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    color: var(--primary);
+    background: var(--background-secondary);
+}
+
+.debug-box {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -54,10 +68,7 @@ canvas {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 5px;
     padding: 5px;
-    color: var(--primary);
-    background: var(--background-secondary);
 }
 
 .tooltip {
@@ -100,16 +111,17 @@ canvas {
     transition: all var(--duration) ease-in-out;
 }
 
-#navigator h1,
+#navigator h3,
 #navigator nav {
     flex: 1 1;
 }
 
-#navigator h1 {
+#navigator h3 {
     justify-content: start;
+    padding: 10px;
 }
 
-#navigator h1 a {
+#navigator h3 a {
     border: none;
     color: var(--primary);
     outline: none;
@@ -118,9 +130,9 @@ canvas {
     transition: all var(--duration) ease-in-out;
 }
 
-#navigator h1 a:hover,
-#navigator h1 a:focus,
-#navigator h1 a:active {
+#navigator h3 a:hover,
+#navigator h3 a:focus,
+#navigator h3 a:active {
     color: var(--secondary);
 }
 
@@ -172,13 +184,17 @@ canvas {
     color: var(--secondary);
 }
 
-#navigator button:hover:last-child,
-#navigator button:focus:last-child,
-#navigator button:active:last-child {
-    border: var(--border-danger);
-    color: var(--danger);
+@media (max-width: 1280px) {
+    canvas {
+        width: 50%;
+    }
 }
-@media(max-width: 48em) {
+
+@media (max-width: 768px) {
+    canvas {
+        width: 75%;
+    }
+
     #navigator {
         align-items: center;
         border: none;
@@ -186,7 +202,7 @@ canvas {
         justify-content: center;
     }
 
-    #navigator h1 {
+    #navigator h3 {
         align-items: center;
         border-bottom: var(--border-secondary);
         display: flex;
@@ -208,5 +224,12 @@ canvas {
         flex: 1 1 100%;
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    canvas {
+        width: 95%;
+        height: 95%;
     }
 }

@@ -11,41 +11,43 @@
 
 <body>
     <header id="navigator">
-        <h1>
-            <a href="/portfolio.html">teleprint.me</a>
-        </h1>
-
+        <h3 id="app-score">Score: 0</h1>
         <nav>
-            <button id="app-main-menu">Menu</button>
-            <button id="app-high-scores">High Scores</button>
-            <button id="app-main-reset">Reset</button>
+            <button id="app-debug">Debug</button>
+            <button id="app-history">History</button>
+            <button id="app-menu">Menu</button>
         </nav>
     </header>
 
     <main>
-        <div class="debug">
-            <p id="container" class="tooltip" data-hover="Canvas Dimensions and Origin">
-                undefined
-            </p>
-            <p id="grid" class="tooltip" data-hover="Grid Cell Count and Dimensions">
-                undefined
-            </p>
-            <p id="cell" class="tooltip" data-hover="Cell Coordinate Position and Velocity">
-                undefined
-            </p>
-            <p id="key" class="tooltip" data-hover="Keyboard Input Code">
-                undefined
-            </p>
+        <div id="debug" class="display-none">
+            <div class="debug-box">
+                <p id="container" class="tooltip" data-hover="Canvas Dimensions and Origin">undefined</p>
+                <p id="grid" class="tooltip" data-hover="Grid Cell Count and Dimensions">undefined</p>
+                <p id="cell" class="tooltip" data-hover="Cell Coordinate Position and Velocity">undefined</p>
+                <p id="key" class="tooltip" data-hover="Keyboard Input Code">undefined</p>
+            </div>
+            <div class="debug-box">
+                <p id="food" class="tooltip" data-hover="Current Food Cell Coordinate">undefined</p>
+                <p id="score" class="tooltip" data-hover="Current running score">undefined</p>
+                <p id="speed" class="tooltip" data-hover="Current speed in milliseconds">undefined</p>
+                <p id="tail" class="tooltip" data-hover="Snake Tail Cell Coordinate Data">undefined</p>
+            </div>
         </div>
-        <div class="debug">
-            <p id="food" class="tooltip" data-hover="Current Food Cell Coordinate">undefined</p>
-            <p id="score" class="tooltip" data-hover="Current running score">undefined</p>
-            <p id="speed" class="tooltip" data-hover="Current speed in milliseconds">undefined</p>
-            <p id="tail" class="tooltip" data-hover="Snake Tail Cell Coordinate Data">undefined</p>
+        <div id="history" class="history">
+            <ol id="history-list" class="history-list">
+                <li class="history-item">
+                    <span data-label="timestamp"></span>
+                    <span data-label="score"></span>
+                </li>
+            </ol>
         </div>
-        <canvas id="snake">Oops! Your browser does not support HTML5 Canvas.</canvas>
+        <canvas id="snake">
+            Oops! Your browser does not support HTML5 Canvas.
+        </canvas>
     </main>
 
+    <script src="/snake/scripts/menu.js"></script>
     <script src="/snake/scripts/sound.js"></script>
     <script src="/snake/scripts/grid.js"></script>
     <script src="/snake/scripts/cell.js"></script>
