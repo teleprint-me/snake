@@ -39,5 +39,5 @@ history.button.addEventListener("click", (event) => {
 });
 
 menu.button.addEventListener("click", () => {
-    window.location.href = "/portfolio.html";
+    window.location.href = "/index.html";
 });
