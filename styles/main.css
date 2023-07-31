@@ -184,10 +184,8 @@ canvas {
     color: var(--secondary);
 }
 
-@media (max-width: 1280px) {
-    canvas {
-        width: 50%;
-    }
+canvas {
+    width: 40%;
 }
 
 @media (max-width: 768px) {
